@@ -13,6 +13,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import java.awt.SystemColor;
 
 public class Regla extends JFrame{
 	private JPanel contentPane;
@@ -46,7 +48,7 @@ public class Regla extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Dibujar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				escoger();
@@ -61,6 +63,12 @@ public class Regla extends JFrame{
 		textField.setBounds(410, 559, 102, 22);
 		contentPane.add(textField);
 		textField.setColumns(10);
+		
+		JTextPane txtpnIngreseNmeroDe = new JTextPane();
+		txtpnIngreseNmeroDe.setBackground(SystemColor.menu);
+		txtpnIngreseNmeroDe.setText("Ingrese n\u00FAmero de regla");
+		txtpnIngreseNmeroDe.setBounds(266, 558, 124, 20);
+		contentPane.add(txtpnIngreseNmeroDe);
 	
 	}
 	
@@ -97,6 +105,7 @@ public class Regla extends JFrame{
 		definirRegla(regla);	}
 	
 	public void escoger(){
+		setVisible(false);
 		String numRegla;
 		int regla;
 		
@@ -107,7 +116,6 @@ public class Regla extends JFrame{
 			
 				numRegla= textField.getText();
 
-				//numRegla = JOptionPane.showInputDialog("Inserta el numero de regla a mostrar:",null);
 			}
 			while(numRegla.equals(""));
 
