@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
 import java.awt.SystemColor;
+import javax.swing.JLabel;
 
 public class Regla extends JFrame{
 	private JPanel contentPane;
@@ -64,11 +65,9 @@ public class Regla extends JFrame{
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JTextPane txtpnIngreseNmeroDe = new JTextPane();
-		txtpnIngreseNmeroDe.setBackground(SystemColor.menu);
-		txtpnIngreseNmeroDe.setText("Ingrese n\u00FAmero de regla");
-		txtpnIngreseNmeroDe.setBounds(266, 558, 124, 20);
-		contentPane.add(txtpnIngreseNmeroDe);
+		JLabel lblIngreseNmeroDe = new JLabel("Ingrese n\u00FAmero de Regla");
+		lblIngreseNmeroDe.setBounds(244, 562, 156, 14);
+		contentPane.add(lblIngreseNmeroDe);
 	
 	}
 	
@@ -94,6 +93,7 @@ public class Regla extends JFrame{
 			reglaElegida[i] = reglas[regla][i];
 		}
 	}
+	
 	public void inicio(){
 		
 
